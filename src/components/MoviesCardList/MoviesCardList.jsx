@@ -12,7 +12,7 @@ export default function MoviesCardList({ movies }) {
   const location = useLocation();
 
   return (
-    <section className="movies-card-list__cards cards">
+    <section className="cards">
       <ul className="cards__list">
         {movies.map((movie) => (
           <MoviesCard movie={movie} />

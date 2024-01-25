@@ -18,7 +18,7 @@ export default function AboutMe() {
             </p>
             <a
               className="about-me__link"
-              href="https://github.com/MarinaGromova"
+              href="https://github.com/MarinaGromova" target="blank"
             >
               Github
             </a>

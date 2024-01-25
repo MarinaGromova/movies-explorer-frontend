@@ -9,7 +9,7 @@ export default function Portfolio() {
           <li className="portfolio__list">
             <a
               className="portfolio__link"
-              href="https://github.com/MarinaGromova"
+              href="https://github.com/MarinaGromova" target="blank"
             >
               Статичный сайт
               <img className="portfolio__img" src={arrow} alt="Стрелка" />
@@ -18,7 +18,7 @@ export default function Portfolio() {
           <li className="portfolio__list">
             <a
               className="portfolio__link"
-              href="https://github.com/MarinaGromova"
+              href="https://github.com/MarinaGromova" target="blank"
             >
               Адаптивный сайт
               <img className="portfolio__img" src={arrow} alt="Стрелка" />
@@ -27,7 +27,7 @@ export default function Portfolio() {
           <li className="portfolio__list">
             <a
               className="portfolio__link"
-              href="https://github.com/MarinaGromova"
+              href="https://github.com/MarinaGromova" target="blank"
             >
               Одностраничное приложение
               <img className="portfolio__img" src={arrow} alt="Стрелка" />

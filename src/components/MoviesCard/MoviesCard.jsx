@@ -20,7 +20,7 @@ export default function MoviesCard({ movie }) {
       {location.pathname === "/saved-movies" ? (
         <button
           type="button"
-          className="card__button movie__button_remove"
+          className="card__button card__button_remove"
         ></button>
       ) : (
         <button

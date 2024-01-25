@@ -49,6 +49,10 @@
   border: 0;
 }
 
+.search-form__button:hover {
+  opacity: 0.8;
+}
+
 .search-form__checkbox-container {
   display: flex;
   align-items: center;
