@@ -1,0 +1,37 @@
+.navtab {
+  background-color: #073042;
+  padding: 84px 70px 75px;
+}
+
+.navtab__button {
+  background-color: #073042;
+  color: #fff;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  width: 129px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.navtab__button:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 890px) {
+  .navtab {
+    display: flex;
+    justify-content: center;
+    padding: 92px 0 76px;
+  }
+}
+
+@media screen and (max-width: 465px) {
+  .navtab {
+    padding: 36px 0 30px;
+  }
+}

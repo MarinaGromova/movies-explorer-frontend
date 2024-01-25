@@ -1,0 +1,125 @@
+.menu {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+  transition: linear 0.5s;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.menu_opened {
+  display: flex;
+  justify-content: flex-end;
+  visibility: visible;
+  z-index: 2;
+  opacity: 1;
+}
+
+.menu__container {
+  position: relative;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #202020;
+}
+
+.menu__popup-link {
+  color: #fff;
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+  padding-bottom: 28px;
+}
+
+.menu__popup-link:hover {
+  opacity: 0.8;
+}
+
+.menu__popup-link:active {
+  text-decoration: underline 1px solid #fff;
+  text-underline-offset: 7px;
+}
+
+.menu__popup-account {
+  color: #fff;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.menu__container-link {
+  display: flex;
+  flex-direction: column;
+  width: 340px;
+  padding: 159px 90px 0;
+  position: relative;
+}
+
+.menu__container-link:nth-last-of-type(1) {
+  justify-content: space-between;
+}
+
+.menu__button {
+  padding: 0;
+  border: 0;
+  background-image: url("../../images/menu-close.svg");
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  position: absolute;
+  top: 22.44px;
+  right: 22.44px;
+  z-index: 1;
+}
+
+.menu__container-account {
+  align-self: center;
+  margin-bottom: 92px;
+}
+
+.menu__popup-img {
+  width: 10.383px;
+  height: 10.669px;
+  background-color: #313131;
+  padding: 9.75px 9.81px 9.58px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  margin-left: 13px;
+}
+
+@media screen and (max-width: 600px) {
+  .menu__container {
+    max-width: 320px;
+  }
+
+  .menu__container-link {
+    gap: 24px;
+    align-self: center;
+  }
+
+  .menu__popup-link {
+    padding-bottom: 0;
+  }
+
+  .menu__button-close {
+    top: 13.44px;
+    right: 13.44px;
+  }
+}
