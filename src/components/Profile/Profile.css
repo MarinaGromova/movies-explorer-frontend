@@ -1,0 +1,136 @@
+.profile__container {
+  margin: 74px auto 70px;
+  max-width: 1140px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.profile__title {
+  margin: 0 0 123px;
+  color: #fff;
+  text-align: center;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.profile__form {
+  margin: 0 0 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile__input-container {
+  min-width: 410px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  margin-bottom: 17px;
+}
+
+.profile__input-container:nth-child(1) {
+  border-bottom: 1px solid #424242;
+}
+
+.profile__input-container:nth-last-of-type(1) {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.profile__label {
+  color: #fff;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  flex-shrink: 0;
+}
+
+.profile__input {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  text-align: right;
+  color: #fff;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.profile__button {
+  color: #fff;
+  text-align: center;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.profile__button:hover {
+  opacity: 0.8;
+}
+
+.profile__link {
+  margin-top: 16px;
+  text-decoration: none;
+  color: #ee3465;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.profile__link:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 768px) {
+  .profile__container {
+    margin: 236px auto 0;
+  }
+
+  .profile__title {
+    margin: 0 0 96px;
+  }
+
+  .profile__form {
+    margin: 0 0 210px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .profile__container {
+    margin: 70px auto 0;
+  }
+
+  .profile__title {
+    margin: 0 0 80px;
+  }
+
+  .profile__form {
+    margin: 0 0 379px;
+  }
+
+  .profile__input-container {
+    min-width: 260px;
+  }
+
+  .profile__button {
+    font-size: 12px;
+  }
+
+  .profile__link {
+    font-size: 12px;
+  }
+}
