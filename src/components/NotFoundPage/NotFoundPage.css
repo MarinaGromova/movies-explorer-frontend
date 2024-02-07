@@ -38,6 +38,8 @@
   line-height: normal;
   text-decoration: none;
   margin: 184px auto 0;
+  background: transparent;
+  border: none;
 }
 
 @media screen and (max-width: 500px) {

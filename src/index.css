@@ -18,6 +18,7 @@
 @import url(./components/Register/Register.css);
 @import url(./components/NotFoundPage/NotFoundPage.css);
 @import url(./components/Menu/Menu.css);
+@import url(./components/InfoTooltip/InfoTooltip.css);
 
 
 body {
