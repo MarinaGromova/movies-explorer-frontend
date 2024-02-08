@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import SearchForm from "../SearchForm/SearchForm";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
 import Preloader from "../Preloader/Preloader";
@@ -17,11 +17,12 @@ export default function Movies({
   const [message, setMessage] = useState(false);
   const [isFound, setIsFound] = useState(true);
 
+
   //запуск функции с короткометражками и фильтрацией
   useEffect(() => {
     getOnSearchMovies();
     setShortMovies(onSearchShortMovies(allMovies));
-  }, [isSearchText, isCheckbox]);
+  }, [isSearchText, isCheckbox, moviesList]);
 
   useEffect(() => {
     getSearchPrevious();
@@ -32,7 +33,8 @@ export default function Movies({
     setCheckbox(!isCheckbox);
   };
 
-  //поиск по массиву с фильмами в инпуте "movieTitle", фильтрация с использованием методов:для массивов и строк
+  //поиск по массиву с фильмами в инпуте "movieTitle", фильтрация с использованием методов:
+  //для массивов и строк
   const onSearch = (moviesList, searchMovie) => {
     return moviesList.filter((movie) => {
       return (
@@ -61,6 +63,7 @@ export default function Movies({
           setIsFound(false);
         } else {
           setIsFound(true);
+          setAllMovies(foundMovies)
           localStorage.setItem(
             "foundMoviesPrevious",
             JSON.stringify(foundMovies)

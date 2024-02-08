@@ -13,6 +13,6 @@ export function moviesArray(movies) {
     movieId: movie.id,
     nameRU: movie.nameRU,
     nameEN: movie.nameEN,
-    key: movie.id,
+    // key: movie.id,
   }));
 }
