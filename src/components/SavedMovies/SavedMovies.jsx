@@ -88,6 +88,7 @@ export default function SavedMovies({
           savedMovies={savedMovies}
           onDeleteCard={onDeleteCard}
           isFound={isFound}
+          isSavedCard={true}
         />
       )}
     </main>

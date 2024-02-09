@@ -52,7 +52,6 @@ export default function SearchForm({ onSearch, searchText, isCheckbox, handleCha
         <div className="search-form__checkbox-container">
           <input
             type="checkbox"
-            // name="checkbox"
             className="search-form__checkbox-input"
             id="switch"
             onChange={handleChangeCheckbox}

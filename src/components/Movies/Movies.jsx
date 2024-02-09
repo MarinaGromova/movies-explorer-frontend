@@ -17,12 +17,15 @@ export default function Movies({
   const [message, setMessage] = useState(false);
   const [isFound, setIsFound] = useState(true);
 
-
   //запуск функции с короткометражками и фильтрацией
   useEffect(() => {
-    getOnSearchMovies();
     setShortMovies(onSearchShortMovies(allMovies));
+    getOnSearchMovies();
   }, [isSearchText, isCheckbox, moviesList]);
+
+  useEffect(() => {
+    getOnSearchMovies();
+  }, []);
 
   useEffect(() => {
     getSearchPrevious();
@@ -55,23 +58,23 @@ export default function Movies({
   const getOnSearchMovies = () => {
     setIsLoading(true);
     setAllMovies([]);
-    const foundMovies = onSearch(moviesList, isSearchText);
     try {
       if (isSearchText.length > 0) {
+        const foundMovies = onSearch(moviesList, isSearchText);
         if (foundMovies.length === 0) {
           setMessage(false);
           setIsFound(false);
         } else {
           setIsFound(true);
-          setAllMovies(foundMovies)
           localStorage.setItem(
             "foundMoviesPrevious",
             JSON.stringify(foundMovies)
-            );
-            localStorage.setItem("searchTextPrevious", isSearchText);
-            localStorage.setItem("checkboxPrevious", JSON.stringify(isCheckbox));
-            setAllMovies(foundMovies);
-          }
+          );
+          localStorage.setItem("searchTextPrevious", isSearchText);
+          localStorage.setItem("checkboxPrevious", JSON.stringify(isCheckbox));
+          console.log(foundMovies);
+          setAllMovies(foundMovies);
+        }
       }
       return;
     } catch (err) {
@@ -113,6 +116,7 @@ export default function Movies({
           onSaveCard={onSaveCard}
           onDeleteCard={onDeleteCard}
           isFound={isFound}
+          isSavedCard={false}
         />
       )}
     </main>

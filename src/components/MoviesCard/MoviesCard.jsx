@@ -12,34 +12,38 @@ export default function MoviesCard({
 
   let isLiked = false;
 
-  let likedId;
+  //сохраняем в переменную id фильма
+  let movieIdLike;
+
+  //проверяем удовлетворяет ли условие, заданное в передаваемой функции
   isLiked = savedMovies.some((card) => {
     if (card.movieId === movie.movieId) {
-      likedId = card._id;
+      movieIdLike = card._id;
       return true;
     }
     return false;
   });
+
+  //функция лайка для компонента Movie
+  const onLikeandSave = () => {
+    if (isLiked || isSavedCard) {
+      console.log(isSavedCard)
+      onDeleteCard(movie._id ? movie._id : movieIdLike);
+    } else {
+      onSaveCard(movie);
+    }
+  };
+
+  //функция удаления лайка для компонента SavedMovies
+  const onLikeandDelete = () => {
+    onDeleteCard(movie._id ? movie._id : movieIdLike);
+  };
 
   //переводим продолжительность в другой формат
   const handleDuration = (duration) => {
     const hours = Math.floor(duration / 60);
     const minute = duration - hours * 60;
     return `${hours}ч ${minute}м`;
-  };
-
-  //функция лайка
-  const onLikeandSave = () => {
-    if (isLiked || isSavedCard) {
-      onDeleteCard(movie._id ? movie._id : likedId);
-    } else {
-      onSaveCard(movie);
-    }
-  };
-
-  //функция лайка
-  const onLikeandDelete = () => {
-    onDeleteCard(movie._id ? movie._id : likedId);
   };
 
   return (
