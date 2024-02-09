@@ -18,13 +18,13 @@
 }
 
 .profile__form {
-  margin: 0 0 220px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .profile__input-container {
+  position: relative;
   min-width: 410px;
   display: flex;
   justify-content: space-between;
@@ -64,7 +64,15 @@
   line-height: normal;
 }
 
+.profile__button-container {
+  margin: 185px 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
 .profile__button {
+  padding: 0;
+  border: 0;
   color: #fff;
   text-align: center;
   font-family: "Inter", Arial, sans-serif;
@@ -72,7 +80,16 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  background-color: transparent;
   cursor: pointer;
+}
+
+.profile__button_inactive {
+  width: 410px;
+  height: 45px;
+  color: #fff;
+  background-color: #3456f3;
+  border-radius: 3px;
 }
 
 .profile__button:hover {
@@ -95,9 +112,47 @@
   opacity: 0.8;
 }
 
+.profile__span {
+  margin: 0;
+  padding: 20px 0 0;
+  visibility: hidden;
+  opacity: 0;
+  text-align: center;
+  position: absolute;
+  color: #ff3055;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.profile__span_active {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+.profile__button-error {
+  color: #ff3055;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  padding-bottom: 70px;
+  transform: translateY(calc(100% - 54px));
+  display: block;
+}
+
 @media screen and (max-width: 768px) {
   .profile__container {
     margin: 236px auto 0;
+  }
+
+  .profile__button-container {
+    margin: 175px 0 0;
   }
 
   .profile__title {
@@ -114,12 +169,16 @@
     margin: 70px auto 0;
   }
 
+  .profile__button-container {
+    margin: 276px 0 0;
+  }
+
   .profile__title {
     margin: 0 0 80px;
   }
 
   .profile__form {
-    margin: 0 0 379px;
+    margin: 0;
   }
 
   .profile__input-container {
@@ -128,6 +187,7 @@
 
   .profile__button {
     font-size: 12px;
+    width: 260px;
   }
 
   .profile__link {

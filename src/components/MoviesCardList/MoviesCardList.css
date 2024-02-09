@@ -31,6 +31,11 @@
   cursor: pointer;
 }
 
+.cards__not-found {
+  color: #ffffff;
+  text-align: center;
+}
+
 @media screen and (max-width: 1276px) {
   .cards__list {
     grid-template-columns: repeat(auto-fill, 342px);
